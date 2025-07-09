@@ -7,7 +7,7 @@ export default function Memory() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
 
-  async function handleSearch(e) {
+  async function handleSearch(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const res = await fetch('/api/memory/query', {
       method: 'POST',
