@@ -1,6 +1,9 @@
+use client
+
 import { useState } from 'react';
 
 export default function Memory() {
+  
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
 
@@ -29,4 +32,4 @@ export default function Memory() {
       </ul>
     </div>
   );
-}
+}i
