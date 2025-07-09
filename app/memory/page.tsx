@@ -5,7 +5,12 @@ import { useState } from 'react';
 export default function Memory() {
   
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  type MemoryResult = {
+  content_chunk?: string;
+  content?: string;
+};
+
+const [results, setResults] = useState<MemoryResult[]>([]);
 
   async function handleSearch(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
