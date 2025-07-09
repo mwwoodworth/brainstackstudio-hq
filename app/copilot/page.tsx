@@ -5,7 +5,7 @@ export default function Copilot() {
   const [prompt, setPrompt] = useState('');
   const [response, setResponse] = useState('');
 
-  async function handleSend(e) {
+  async function handleSearch(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const res = await fetch('/chat', {
       method: 'POST',
